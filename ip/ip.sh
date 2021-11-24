@@ -1,7 +1,26 @@
 #!/bin/bash
 # set -ue -o pipefail
 
-LOCAL_IP=$(ifconfig | grep 'inet ' | grep -v ' 127.' | cut -d ' ' -f 2)
+LOCAL_IP=($(ifconfig | grep 'inet ' | grep -v ' 127.' | cut -d ' ' -f 2))
+
+LOCAL_JSON=""
+index=0
+for ip in "${LOCAL_IP[@]}"; do
+  LOCAL_JSON+=$(cat << EOF
+    ,{
+        "uid": "localip${index}",
+        "title": "${ip}",
+        "subtitle": "本地 IP ${index}",
+        "arg": "${ip}",
+        "autocomplete": "${ip}",
+        "valid": true
+    }
+EOF
+  )
+
+  ((index++))
+done
+#echo "${LOCAL_JSON}"
 
 # ip.cn 经常 down 掉，所以换一个实现
 # PUBLIC_JSON=`curl -s "https://ip.cn/api/index?ip=&type=0"`
@@ -24,14 +43,6 @@ PUBLIC_ADDRESS=$(echo "${arr[1]##*: }" | tr -d "\r")
 cat << _JSON_
 {"items": [
     {
-        "uid": "localip0",
-        "title": "${LOCAL_IP}",
-        "subtitle": "本地 IP",
-        "arg": "${LOCAL_IP}",
-        "autocomplete": "${LOCAL_IP}",
-        "valid": true
-    },
-    {
         "uid": "publicip",
         "title": "${PUBLIC_IP}",
         "subtitle": "公网 IP",
@@ -47,5 +58,6 @@ cat << _JSON_
         "autocomplete": "${PUBLIC_ADDRESS}",
         "valid": true
     }
+    ${LOCAL_JSON}
 ]}
 _JSON_
