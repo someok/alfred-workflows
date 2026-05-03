@@ -1,5 +1,17 @@
 # alfred-workflows
 
+## VSCode Recent Workspaces
+
+显示 VSCode 中的最近项目列表，点击可以用其对应的 profile 打开。
+
+> 注意：VSCode 需要是最新版，因为需要读取的数据在旧版是不一样的。
+
+![example](./VSCode-Recent-Workspaces/screenshot.png)
+
+### 下载地址：
+
+- [VSCode-Recent-Workspaces.alfredworkflow](./VSCode-Recent-Workspaces.alfredworkflow)
+
 ## ip
 
 展示本地和公网 ip，后者使用的 api 来自 https://ip.cn
