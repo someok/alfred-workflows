@@ -1,201 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.someok.alfred.vscode-recent-workspaces</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
 	<dict>
-		<key>bundleid</key>
-		<string>com.someok.alfred.vscode-recent-workspaces</string>
-		<key>category</key>
-		<string>Tools</string>
-		<key>connections</key>
-		<dict>
-			<key>keyword</key>
-			<array>
-				<dict>
-					<key>destinationuid</key>
-					<string>script_filter</string>
-					<key>modifiers</key>
-					<integer>0</integer>
-					<key>modifiersubtext</key>
-					<string></string>
-					<key>vitoclose</key>
-					<false />
-				</dict>
-			</array>
-			<key>script_filter</key>
-			<array>
-				<dict>
-					<key>destinationuid</key>
-					<string>run_script</string>
-					<key>modifiers</key>
-					<integer>0</integer>
-					<key>modifiersubtext</key>
-					<string></string>
-					<key>vitoclose</key>
-					<false />
-				</dict>
-			</array>
-		</dict>
-		<key>createdby</key>
-		<string>someok</string>
-		<key>description</key>
-		<string>显示 VSCode 最近 Workspaces</string>
-		<key>disabled</key>
-		<false />
-		<key>name</key>
-		<string>VSCode Recent Workspaces</string>
-		<key>objects</key>
+		<key>keyword</key>
 		<array>
 			<dict>
-				<key>config</key>
-				<dict>
-					<key>argumenttype</key>
-					<integer>1</integer>
-					<key>keyword</key>
-					<string>{var:keyword}</string>
-					<key>subtext</key>
-					<string>Search recent VSCode workspaces</string>
-					<key>text</key>
-					<string>VSCode Workspaces</string>
-					<key>withspace</key>
-					<true />
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.input.keyword</string>
-				<key>uid</key>
-				<string>keyword</string>
-				<key>version</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>config</key>
-				<dict>
-					<key>alfredfiltersresults</key>
-					<false />
-					<key>alfredfiltersresultsmatchmode</key>
-					<integer>0</integer>
-					<key>argumenttreatemptyqueryasnil</key>
-					<false />
-					<key>argumenttrimmode</key>
-					<integer>0</integer>
-					<key>argumenttype</key>
-					<integer>1</integer>
-					<key>escaping</key>
-					<integer>102</integer>
-					<key>queuedelaycustom</key>
-					<integer>1</integer>
-					<key>queuedelayimmediatelyinitially</key>
-					<false />
-					<key>queuedelaymode</key>
-					<integer>0</integer>
-					<key>queuemode</key>
-					<integer>1</integer>
-					<key>runningsubtext</key>
-					<string></string>
-					<key>script</key>
-					<string>python3 main.py "{query}"</string>
-					<key>scriptargtype</key>
-					<integer>0</integer>
-					<key>scriptfile</key>
-					<string></string>
-					<key>subtext</key>
-					<string></string>
-					<key>title</key>
-					<string></string>
-					<key>type</key>
-					<integer>5</integer>
-					<key>withspace</key>
-					<false />
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.input.scriptfilter</string>
-				<key>uid</key>
+				<key>destinationuid</key>
 				<string>script_filter</string>
-				<key>version</key>
-				<integer>3</integer>
-			</dict>
-			<dict>
-				<key>config</key>
-				<dict>
-					<key>concurrently</key>
-					<false />
-					<key>escaping</key>
-					<integer>102</integer>
-					<key>script</key>
-					<string>bash open_vscode.sh "{query}"</string>
-					<key>scriptargtype</key>
-					<integer>0</integer>
-					<key>scriptfile</key>
-					<string></string>
-					<key>type</key>
-					<integer>0</integer>
-				</dict>
-				<key>type</key>
-				<string>alfred.workflow.action.script</string>
-				<key>uid</key>
-				<string>run_script</string>
-				<key>version</key>
-				<integer>2</integer>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
-		<key>readme</key>
-		<string>Quickly search and open recent VSCode workspaces with profile support. Usage: 1.
-			Type "vscr" in Alfred 2. Search for your workspace by name or profile 3. Press Enter to
-			open in VSCode 4. Hold Cmd to copy the workspace path Features: - Lists all recent
-			VSCode workspaces - Shows workspace profile information - Supports fuzzy search -
-			Cmd+Enter to copy path</string>
-		<key>uidata</key>
-		<dict>
-			<key>keyword</key>
-			<dict>
-				<key>xpos</key>
-				<real>35</real>
-				<key>ypos</key>
-				<real>190</real>
-			</dict>
-			<key>run_script</key>
-			<dict>
-				<key>xpos</key>
-				<real>565</real>
-				<key>ypos</key>
-				<real>190</real>
-			</dict>
-			<key>script_filter</key>
-			<dict>
-				<key>xpos</key>
-				<real>285</real>
-				<key>ypos</key>
-				<real>190</real>
-			</dict>
-		</dict>
-		<key>userconfigurationconfig</key>
+		<key>script_filter</key>
 		<array>
 			<dict>
-				<key>config</key>
-				<dict>
-					<key>default</key>
-					<string>vscr</string>
-					<key>placeholder</key>
-					<string></string>
-					<key>required</key>
-					<false />
-					<key>trim</key>
-					<true />
-				</dict>
-				<key>description</key>
+				<key>destinationuid</key>
+				<string>run_script</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
 				<string></string>
-				<key>label</key>
-				<string>vscr</string>
-				<key>type</key>
-				<string>textfield</string>
-				<key>variable</key>
-				<string>keyword</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
-		<key>variablesdontexport</key>
-		<array />
-		<key>version</key>
-		<string>1.0.0</string>
-		<key>webaddress</key>
-		<string>https://github.com/someok/alfred-workflows</string>
 	</dict>
+	<key>createdby</key>
+	<string>someok</string>
+	<key>description</key>
+	<string>显示 VSCode 最近 Workspaces</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>VSCode Recent Workspaces</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>{var:keyword}</string>
+				<key>subtext</key>
+				<string>Search recent VSCode workspaces</string>
+				<key>text</key>
+				<string>VSCode Workspaces</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>keyword</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python3 main.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>script_filter</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>bash open_vscode.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>run_script</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Quickly search and open recent VSCode workspaces with profile support. 
+Usage: 
+1. Type "vscr" in Alfred 
+2. Search for your workspace by name or profile 
+3. Press Enter to open in VSCode</string>
+	<key>uidata</key>
+	<dict>
+		<key>keyword</key>
+		<dict>
+			<key>xpos</key>
+			<real>35</real>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>run_script</key>
+		<dict>
+			<key>xpos</key>
+			<real>540</real>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+		<key>script_filter</key>
+		<dict>
+			<key>xpos</key>
+			<real>285</real>
+			<key>ypos</key>
+			<real>190</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>vscr</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>vscr</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/someok/alfred-workflows</string>
+</dict>
 </plist>

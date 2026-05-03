@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.plilst": "xml"
+    },
+    "[xml]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": false
+    },
+}
