@@ -35,8 +35,9 @@
 1. ⌘ + C：拷贝选中的 host
 2. ⌘ + L：放大显示选中行内容
 
-![example](./ssh//example.png)
+![example](./ssh/example.png)
 
 ### 下载地址
 
-- [SSH_config_hosts.alfredworkflow](./SSH_config_hosts.alfredworkflow)
+- 支持 iTerm：[SSH_config_hosts-iterm.alfredworkflow](./SSH_config_hosts-iterm.alfredworkflow)
+- 支持 Ghostty：[SSH_config_hosts-Ghostty.alfredworkflow](./SSH_config_hosts-Ghostty.alfredworkflow)
